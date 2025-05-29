@@ -11,6 +11,9 @@ import { FaFigma } from "react-icons/fa";
 import { MdOutlineWebAsset } from 'react-icons/md';
 import { Magnetic } from '@/components/ui/magnetic';
 import Link from 'next/link';
+import { SiKotlin } from "react-icons/si";
+import { FaSwift } from "react-icons/fa";
+// import { FaFlutter } from "react-icons/fa6";
 
 
 const page = () => {
@@ -31,10 +34,13 @@ const page = () => {
         <RiTailwindCssFill className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
         <GrAndroid className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
         <FaApple className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
+                 {/* 
         <MdOutlineWebAsset className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
+                 */}
         <BiLogoPostgresql className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
         <IoLogoVercel className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
         <FaFigma className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-5xl' />
+        <SiKotlin className='hover:border rounded-md hover:opacity-85 hover:scale-105 border-[rgb(46,46,46)] p-2 text-[44px]' />
       </div>
       <div className="max-w-6xl mx-auto mt-12">
 
@@ -100,12 +106,20 @@ const page = () => {
           </div>
 
           <div className="p-6  rounded-xl shadow-md flex items-center space-x-4">
+            <i className="text-4xl text-white"><SiKotlin /></i>
+            <div>
+              <h3 className="text-xl font-semibold">Kotlin</h3>
+              <p className="text-gray-600"> Kotlin has increased our productivity and help focus focus on innovation!</p>
+            </div>
+          </div>
+{/* 
+          <div className="p-6  rounded-xl shadow-md flex items-center space-x-4">
             <i className="text-4xl text-white"><IoLogoVercel /></i>
             <div>
               <h3 className="text-xl font-semibold">Vercel</h3>
               <p className="text-gray-600">Lightning-fast, serverless deployment with global reach.</p>
             </div>
-          </div>
+          </div> */}
 
           {/* <!-- UI/UX & Design --> */}
           <div className="p-6  rounded-xl shadow-md flex items-center space-x-4">
