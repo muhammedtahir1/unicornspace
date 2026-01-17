@@ -109,12 +109,12 @@ export default function SocialLinks() {
           </Button>
         </Link> */}
 
-        <Link href="mailto:faizan@unicorn-space.com" className="block">
+        <Link href="mailto:tahir65080@gmail.com" className="block">
           <Button
             variant="secondary"
             className="w-full py-6  bg-slate-600 hover:bg-[#3D444A] text-white transition-all duration-300 hover:scale-[1.02]"
           >
-            faizan@unicorn-space.com <Mail />
+            Mail<Mail />
           </Button>
         </Link>
         <Link href="https://www.linkedin.com/company/unicornspace/" className="block">

@@ -19,7 +19,7 @@ const Footer = () => {
         { title: "Portfolio", link: "/work" },
         { title: "Testimonials", link: "/#testimonials" },
         { title: "Our coding standards", link: "/our-tech-stack#code-quality" },
-        { title: "faizan@unicorn-space.com", link: "mailto:faizan@unicorn-space.com" },
+        // { title: "faizan@unicorn-space.com", link: "mailto:faizan@unicorn-space.com" },
       ],
     },
     // {
@@ -89,9 +89,9 @@ const Footer = () => {
             <Link href={"https://www.linkedin.com/company/unicornspace/"}>
               <FaLinkedin size={24} />
             </Link>
-            <Link href={"mailto:faizan@unicorn-space.com"}>
+            {/* <Link href={"mailto:faizan@unicorn-space.com"}>
               <Mail size={24} />
-            </Link>
+            </Link> */}
             <Link href={"https://github.com/mohdfaizan5/unicornspace"}>
               <FaGithub size={24} />
             </Link>
