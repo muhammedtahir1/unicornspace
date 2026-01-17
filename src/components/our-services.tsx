@@ -12,6 +12,7 @@ import { CiMobile3 } from "react-icons/ci";
 import ProjectBoard from './project-board';
 import { MdOutlineWebAsset } from "react-icons/md";
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const OurServices = ({ className }: { className?: string }) => {
 
@@ -114,7 +115,7 @@ Icons that support the brand and help simplify your message.
                 </div>
                 <div className="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
                   <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                    <img
+                    <Image
                       className="size-full object-cover object-top"
                       src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png"
                       alt=""
@@ -135,7 +136,7 @@ Icons that support the brand and help simplify your message.
                     Speed matters. Our optimized code, efficient asset loading, and cutting-edge technologies ensure lightning-fast load times and smooth user experiences.                  </p>
                 </div>
                 <div className="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
-                  <img
+                  <Image
                     className="w-full max-lg:max-w-xs"
                     src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
                     alt=""
@@ -157,7 +158,7 @@ Icons that support the brand and help simplify your message.
                   </p>
                 </div>
                 <div className="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
-                  <img
+                  <Image
                     className="h-[min(152px,40cqw)] object-cover"
                     src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-security.png"
                     alt=""

@@ -35,33 +35,36 @@ export function Magnetic({
   const springY = useSpring(y, springOptions);
 
   useEffect(() => {
-    const calculateDistance = (e: MouseEvent) => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const distanceX = e.clientX - centerX;
-        const distanceY = e.clientY - centerY;
+  const calculateDistance = (e: MouseEvent) => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
 
-        const absoluteDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
+      const distanceX = e.clientX - centerX;
+      const distanceY = e.clientY - centerY;
 
-        if (isHovered && absoluteDistance <= range) {
-          const scale = 1 - absoluteDistance / range;
-          x.set(distanceX * intensity * scale);
-          y.set(distanceY * intensity * scale);
-        } else {
-          x.set(0);
-          y.set(0);
-        }
+      const absoluteDistance = Math.sqrt(
+        distanceX ** 2 + distanceY ** 2
+      );
+
+      if (isHovered && absoluteDistance <= range) {
+        const scale = 1 - absoluteDistance / range;
+        x.set(distanceX * intensity * scale);
+        y.set(distanceY * intensity * scale);
+      } else {
+        x.set(0);
+        y.set(0);
       }
-    };
+    }
+  };
 
-    document.addEventListener('mousemove', calculateDistance);
+  document.addEventListener('mousemove', calculateDistance);
+  return () => {
+    document.removeEventListener('mousemove', calculateDistance);
+  };
+}, [ref, isHovered, intensity, range, x, y]);
 
-    return () => {
-      document.removeEventListener('mousemove', calculateDistance);
-    };
-  }, [ref, isHovered, intensity, range]);
 
   useEffect(() => {
     if (actionArea === 'parent' && ref.current?.parentElement) {
